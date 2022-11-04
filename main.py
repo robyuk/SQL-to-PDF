@@ -31,7 +31,7 @@ pdf.set_font(family=headerfont, style=headerstyle, size=headersize)
 cur.execute('PRAGMA table_info(ips)')
 columns=cur.fetchall()
 print(columns)
-exit(0)
+
 # We only want the column names (2nd item in each tuple) in the pdf document
 for colname in columns:
   pdf.cell(w=cw, h=ch, txt=colname[1], border=tblborder)
